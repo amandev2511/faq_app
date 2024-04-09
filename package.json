@@ -1,0 +1,33 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "axios": "^1.6.1",
+        "laravel-vite-plugin": "^0.8.0",
+        "vite": "^4.0.0"
+    },
+
+    "name": "my-app",
+    "private": true,
+    "license": "UNLICENSED",
+    "scripts": {
+      "shopify": "shopify",
+      "build": "shopify app build",
+      "dev": "shopify app dev",
+      "info": "shopify app info",
+      "generate": "shopify app generate",
+      "deploy": "shopify app deploy"
+    },
+    "dependencies": {
+      "@shopify/app": "^3",
+      "@shopify/cli": "^3"
+    },
+    "workspaces": [
+      "extensions/*"
+    ]
+  }
+  

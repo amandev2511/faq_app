@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Example</title>
+    <style>
+        .accordion {
+            display: flex;
+            flex-direction: column;
+            max-width: 885px;
+            background-color: {{ block.settings.background_color }};
+            color: {{ block.settings.color }};
+            padding: {{ block.settings.padding_x }}px;
+            font-size: {{ block.settings.size }}px;
+        }
+
+        .accordion-item {
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        .accordion-header {
+            padding: 10px;
+            background-color: #f1f1f1;
+            font-weight: bold;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 10px;
+        }
+
+        .accordion-item.active .accordion-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div id="responseData"></div>
+
+<script>
+    
+</script>
+
+</body>
+</html>
+
+
+
+<input type="hidden" id="pro_id" value="{{product.id}}">
+
+{% schema %}
+{
+    "name":"Faq Pages",
+    "target":"section",
+    "templates": ["page"],
+    "javascript": "pages.js",
+    "settings": [
+    {
+      "id": "color",
+      "type": "color",
+      "label": "color",
+      "default": "#000000"
+    },
+    {
+      "id": "background_color",
+      "type": "color",
+      "label": "Background color",
+      "default": "#736C6C"
+    },
+        {
+      "id": "icon_color",
+      "type": "color",
+      "label": "Icon color",
+      "default": "#000000"
+    },
+    {
+      "id": "icon_background_color",
+      "type": "color",
+      "label": "Icon background color",
+      "default": "#000000"
+    },
+    {
+      "id": "size",
+      "type": "number",
+      "label": "Size",
+      "default": 24
+    },
+    {
+      "id": "bold_text",
+      "type": "text",
+      "label": "Bold Text",
+      "default": "<strong>Write bold css for text</strong>"
+
+    },
+    {
+      "id": "italic_text",
+      "type": "text",
+      "label": "Italic Text",
+      "default": "<i>Write italic css for text</i>"
+
+    },
+    {
+      "id": "custom_css",
+      "type": "textarea",
+      "label": "Custom Text",
+      "default": "Write italic css for text"
+
+    },
+    {
+      "id": "padding_x",
+      "type": "number",
+      "label": "Padding X",
+      "default": 20
+    },
+    {
+      "id": "padding_y",
+      "type": "number",
+      "label": "Padding Y",
+      "default": 0
+    },
+    {
+      "id": "margin_x",
+      "type": "number",
+      "label": "Margin X",
+      "default": 0
+    },
+    {
+      "id": "margin_y",
+      "type": "number",
+      "label": "Margin X",
+      "default": 0
+    }
+    
+  ]
+}
+{% endschema %}
